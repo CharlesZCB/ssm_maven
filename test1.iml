@@ -23,6 +23,9 @@
           <file>file://$MODULE_DIR$/src/main/resources/springMvc.xml</file>
           <file>file://$MODULE_DIR$/src/main/java/java/com/cn/dao/UserMapping.xml</file>
         </fileset>
+        <fileset id="fileset3" name="UserMapping" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/com/cn/dao/UserMapping.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
