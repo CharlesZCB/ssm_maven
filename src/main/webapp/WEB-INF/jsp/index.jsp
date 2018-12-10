@@ -34,7 +34,7 @@
             <c:if test="${user.sex==0}">
                 <td>女</td>
             </c:if>
-            <td><a href="${path}/user/deleteone?id=${user.id}">删除</a>&nbsp;<a>修改</a></td>
+            <td><a href="${path}/user/deleteone?id=${user.id}">删除</a>&nbsp;<a >修改</a></td>
         </tr>
     </c:forEach>
 </table>
