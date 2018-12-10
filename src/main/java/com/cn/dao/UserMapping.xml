@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-</beans>
+    <mapper namespace="com.cn.dao.UserMapping">
+    <insert id="insertone" >insert into user(name,age,sex,create_at) values(#{user.name},#{user.age},#{user.sex},now())</insert>
+    <select id="listall" resultType="User">select * from user order by create_at desc </select>
+    <select id="findById" resultType="User">select * from user where id = #{id}</select>
+    <delete id="deleteById">delete from user where id =#{id}</delete>
+    </mapper>
