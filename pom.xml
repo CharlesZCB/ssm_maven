@@ -199,6 +199,14 @@
       </dependency>
 
 
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>1.9.2</version>
+    </dependency>
+
+
+
   </dependencies>
 
   <build>
@@ -214,6 +222,14 @@
           </httpConnector>
           <stopKey>shutdown</stopKey>
           <stopPort>9966</stopPort>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
         </configuration>
       </plugin>
     </plugins>

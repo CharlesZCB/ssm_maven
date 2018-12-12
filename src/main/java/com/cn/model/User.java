@@ -5,17 +5,19 @@ import org.apache.solr.client.solrj.beans.Field;
 import java.util.Date;
 
 public class User {
+    @Field("create_at")
     private Date create_at;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    private int id;
+    @Field("id")
+    private String id;
     public Date getCreate_at() {
         return create_at;
     }
@@ -24,19 +26,21 @@ public class User {
         this.create_at = create_at;
     }
 
-    @Field
+    @Field("name")
     private String name;
 
-    @Field
+    @Field("age")
     private int age;
 
-    @Field
+    @Field("sex")
     private int sex;
 
-    public User(String name, int age, int sex) {
+    public User(String id,String name, int age, int sex,Date create_at) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.sex = sex;
+        this.create_at = create_at;
     }
 
     public User() {
@@ -45,10 +49,11 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
+                "id='" + id + '\'' +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", sex=" + sex +
-                ", create=" + create_at +
+                ", create_at=" + create_at +
 
                 '}';
     }
