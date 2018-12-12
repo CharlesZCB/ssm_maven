@@ -11,4 +11,6 @@ public interface UserMapping {
      List<User> listall();
 
      void deleteById(int id);
+
+     User findById(String id);
 }
